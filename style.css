@@ -1,0 +1,89 @@
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  padding: 50px;
+  background-image: url(images/mechkeyboardheader.png);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.features-section {
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.card {
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+border: 1px solid blue;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+margin: 10px;
+width: 30rem;
+padding: 40px;
+transition: all 0.3s ease;
+}
+
+.card h3 {
+    font-size: 22px;
+    border: 1px solid #5b81ff;
+    background-color: #5b81ff;
+    border-radius: 25px;
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+    transform: translate(-40px, -80px)
+}
+
+.card-container:has(.card:hover) .card:not(:hover) {
+  filter: blur(4px)
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 100;
+    background: linear-gradient(170deg,rgba(166, 230, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.card-container {
+display: flex;
+flex-wrap: wrap;
+gap: 20px; /* Abstand zwischen den Karten */
+justify-content: center; /* Optional: Zentriert die Gruppe der Karten */
+}
+
+@media (max-width: 768px) {
+    .card-container {
+    flex-direction: column; /* Von Reihe zu Spalte */
+    align-items: center; /* Zentriert die Karten in der Spalte */
+    }
+}
